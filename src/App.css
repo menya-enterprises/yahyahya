@@ -134,6 +134,22 @@
   background-color: rgba(0,0,0,0.7);
 }
 
+.loading {
+  background-color: var(--color-black);
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  animation: opacity 2.5s ease-in-out;
+}
+
+.loading.fade-out {
+  opacity: 0;
+}
 
 @media screen and (min-width: 2000px) {
   .custom__button,
