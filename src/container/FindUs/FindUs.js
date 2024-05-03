@@ -16,18 +16,18 @@ function FindUs() {
       <div className="app__findUs-info">
         <h1 className='headtext__tenor'>{t("contact.title")}</h1>
         <div className='findUs__location'>
-          <h1>{t("contact.address.title")}</h1>
+          <h2>{t("contact.address.title")}</h2>
           <p className='p__opensans'>8388 Capstan Way #1423, Richmond, BC V6X 4B6</p>
         </div>
         <div className='findUs__hours'>
-          <h1>{t("contact.hours.openHours")}</h1>
+          <h2>{t("contact.hours.openHours")}</h2>
           <ul>
             <li className='p__opensans' style={{whiteSpace: "pre-line"}}>{t("contact.hours.hoursInfo.open")}</li>
             <li className='p__opensans'>{t("contact.hours.hoursInfo.closed")}</li>
           </ul>
         </div>
         <div className="findUs__contacts">
-        <h1>{t("contact.callUs")}</h1>
+        <h2>{t("contact.callUs")}</h2>
           <p className='p__opensans'>+1 (604) 285-5113</p>
         </div>
         <div className='horizontal__divider'/>

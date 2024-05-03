@@ -64,17 +64,17 @@
     list-style: none;
 }
 
-h1 {
+.app__findUs h2 {
     font: var(--font-alt);
     font-size: 30px;
     color: var(--color-lightSilver);
 }
 
-.headtext__tenor {
+.app__findUs .headtext__tenor {
     font-size: 64px;
 }
 
-.p__opensans {
+.app__findUs .p__opensans {
     color: var(--color-darkSilver);
 }
 
@@ -135,11 +135,11 @@ h1 {
         width: 350px;
     }
 
-    .identity-logo {
+    .app__findUs .identity-logo {
         width: 200px;
     }
 
-    .headtext__tenor {
+    .app__findUs .headtext__tenor {
         font-size: 50px;
     }
 }

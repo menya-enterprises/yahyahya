@@ -43,13 +43,13 @@ function Menu() {
             className='inventory-carousel'
         >
           <div className="inventory-item" onClick={(e) => handleImageClick(e)}>
-            <img src={images.menu_front} alt="menu" />
+            <img src={images.menu_front} alt="menu" loading='eager'/>
           </div>
           <div className="inventory-item" onClick={(e) => handleImageClick(e)}>
-            <img src={images.menu_back} alt="menu" />
+            <img src={images.menu_back} alt="menu" loading='lazy'/>
           </div>
           <div className='inventory-item' onClick={(e) => handleImageClick(e)}>
-        <img src={images.menu_summer} alt="menu" />
+        <img src={images.menu_summer} alt="menu" loading='lazy'/>
       </div>
       </Carousel>
 
@@ -58,7 +58,6 @@ function Menu() {
       
       </div>
       {selectedImage && (
-
         <div className="modal slide-bottom">
             <GiCrossedAirFlows
               fontSize={27}
@@ -66,15 +65,17 @@ function Menu() {
               onClick={() => closeModal()}
               />
             <TransformWrapper initialScale={1}>
-    {({ ...rest }) => (
-      <TransformComponent>
-          <img src={selectedImage} alt="Fullscreen" />
-          </TransformComponent>
-        )}
-      </TransformWrapper>
-          </div>
-
+          {({ ...rest }) => (
+          <TransformComponent>
+              <img src={selectedImage} alt="menu" />
+              </TransformComponent>
+            )}
+          </TransformWrapper>
+          <div className="modal-overlay" onClick={closeModal}/>
+        </div>
+    
       )}
+
     </div>
   )
 }

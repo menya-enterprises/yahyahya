@@ -26,14 +26,14 @@ function NavBar({handleChangeLanguage}) {
           <li className="p__opensans"><a href='#contact'>{t("navbar.contact")}</a></li>
         </ul>
         <div className="app__navbar-lang">
-          <li className="dropdown">
-              <button className="dropdown-button"><FaLanguage size={32} /></button>
+          <div className="dropdown">
+              <button className="dropdown-button" aria-label='Language Change'><FaLanguage size={32} /></button>
               <div className="dropdown-content">
                   <button onClick={(e) => handleChangeLanguage((e.target.innerText).toLowerCase())}>EN</button>
                   <button onClick={(e) => handleChangeLanguage((e.target.innerText).toLowerCase())}>JA</button>
                   <button onClick={(e) => handleChangeLanguage(("zh").toLowerCase())}>CN</button>
               </div>
-          </li>
+          </div>
         </div>
         <div className='app__navbar-order'>
           <a href='https://www.doordash.com/en-CA/store/yah-yah-ya-ramen-richmond-576879/' className='p__opensans' target='_blank' rel="noreferrer">Doordash</a>

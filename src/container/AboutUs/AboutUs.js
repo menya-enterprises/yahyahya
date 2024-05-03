@@ -28,7 +28,7 @@ function AboutUs() {
       <Carousel className="app__aboutUs-carousel" infiniteLoop={true} preventMovementUntilSwipeScrollTolerance={true} dynamicHeight={false} emulateTouch={true} showThumbs={false} showStatus={false} autoPlay={true} stopOnHover={true} interval={15000}>
         <div className="app__aboutUs-content">
           <h1 className='headtext__tenor'>{t("about.title.1")}</h1>
-          <p className='p__tenor' style={{whiteSpace: "pre-line"}}>{t("about.message.1")}<br/>{t("about.message.2")}</p>
+          <p className='p__tenor' style={{whiteSpace: "pre-line", paddingBottom: "2rem"}}>{t("about.message.1")}<br/>{t("about.message.2")}</p>
         </div>
         <div className="app__aboutUs-content">
           <h1 className='headtext__tenor'>{t("about.title.2")}</h1>

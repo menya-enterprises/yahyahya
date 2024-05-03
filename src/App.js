@@ -22,11 +22,13 @@ function App() {
   React.useEffect(() => {
     if (!loading) {
       setTimeout(() => {
-        console.log('page is fully loaded');
+        document.body.style.overflow = '';
         setTimeout(() => {
           setShowLoader(false);
         }, 1250);
       }, 250);
+    } else {
+      document.body.style.overflow = 'hidden';
     }
 
   }, [loading]);
