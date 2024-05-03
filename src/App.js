@@ -8,6 +8,7 @@ import Gallery from './container/Gallery/Gallery';
 import video from "./assets/promo_video.mp4"
 
 function App() {
+  // eslint-disable-next-line
   const [t, i18n] = useTranslation("global");
   const handleChangeLanguage = (lang) => {
     i18n.changeLanguage(lang);

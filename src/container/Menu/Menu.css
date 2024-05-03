@@ -4,6 +4,9 @@
     border-top: 1rem solid var(--color-gold);
     min-height: 100vh;
     width: 100%;
+    gap: 1rem;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .app__menu-inventory {
@@ -18,6 +21,10 @@
     justify-self: center;
     justify-content: flex-start;
     color: var(--color-lightSilver);
+}
+
+.inventory-carousel .control-arrow {
+    background-color: black !important;
 }
 
 .menu__category {
@@ -49,6 +56,26 @@
 
 .app__menu .tools .custom__button {
     flex: 1;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal img {
+    margin: auto;
+    width: 90%;
+    height: 80vh;
+    object-fit:contain;
 }
 
 

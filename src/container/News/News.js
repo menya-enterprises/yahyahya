@@ -2,7 +2,6 @@ import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import "./News.css";
-import newsVideo from "../../assets/promo_video.mp4";
 import { useTranslation } from 'react-i18next';
 // import news from "../../constants/news.json";
 import NewsModal from "../../components/NewsModal/NewsModal";

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
-import images from '../../constants/images'
 import { useTranslation } from 'react-i18next';
 import gallery from '../../constants/gallery';
 

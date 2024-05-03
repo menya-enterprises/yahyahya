@@ -66,7 +66,7 @@ import vegan_Ramen from "../assets/ramen/Vegan Ramen.jpg";
 import yuzu_Cold_Ramen_1 from "../assets/ramen/Yuzu Cold Ramen-1.jpg";
 import yuzu_Cold_Ramen_2 from "../assets/ramen/Yuzu Cold Ramen-2.jpg";
 import yuzu_Cold_Ramen_3 from "../assets/ramen/Yuzu Cold Ramen-3.jpg";
-
+// eslint-disable-next-line
 export default {
     abura_Soba_1: {
         file: abura_Soba_1,

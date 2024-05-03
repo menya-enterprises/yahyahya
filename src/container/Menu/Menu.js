@@ -1,8 +1,6 @@
 import React from 'react'
 
 import "./Menu.css"
-import { MenuItem } from '../../components'
-import {data} from '../../constants'
 import { useTranslation } from 'react-i18next';
 
 import images from '../../constants/images';
@@ -11,24 +9,25 @@ import { Carousel } from 'react-responsive-carousel';
 import {
   TransformWrapper,
   TransformComponent,
-  useControls,
 } from "react-zoom-pan-pinch";
-
-const Controls = () => {
-  const { zoomIn, zoomOut, resetTransform } = useControls();
-  const [t] = useTranslation(["global"]);
-
-  return (
-    <div className="tools" style={{margin:"1rem 0"}}>
-      <button className="custom__button" onClick={() => zoomIn()}>{t("zoom.zoom_in")}</button>
-      <button className="custom__button" onClick={() => zoomOut()}>{t("zoom.zoom_out")}</button>
-      <button className="custom__button" onClick={() => resetTransform()}>{t("zoom.reset")}</button>
-    </div>
-  );
-};
+import { GiCrossedAirFlows } from 'react-icons/gi';
 
 function Menu() {
   const [t] = useTranslation(["global"]);
+  const [selectedImage, setSelectedImage] = React.useState(null);
+
+  const handleImageClick = (e) => {
+    const imgSrc = e.target.lastChild.src
+    setSelectedImage(imgSrc);
+    document.body.style.overflow = 'hidden';
+    
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+    document.body.style.overflow = '';
+  };
+
   return (
     <div className='app__menu section__padding app__wrapper app__bg' id="menu">
       <h1 className='headtext__tenor'>{t("navbar.menu")}</h1>
@@ -43,40 +42,51 @@ function Menu() {
             </div>
           </div>
           ))} */}
-           <TransformWrapper
-      initialScale={1}
-    >
-      {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
-        <>
-          <Controls />
-          <TransformComponent>
+
         <Carousel
             infiniteLoop={true} 
-            dynamicHeight={false}
+            dynamicHeight={true}
             emulateTouch={true} 
             showThumbs={false} 
             showStatus={true} 
             showIndicators={false}
             preventMovementUntilSwipeScrollTolerance={true}
             className='inventory-carousel'
+            // onClickItem={(_, event, item) => handleImageClick(event, item)}
         >
-          <div className="inventory-item">
+          <div className="inventory-item" onClick={(e) => handleImageClick(e)}>
             <img src={images.menu_front} alt="menu" />
           </div>
-          <div className="inventory-item">
+          <div className="inventory-item" onClick={(e) => handleImageClick(e)}>
             <img src={images.menu_back} alt="menu" />
           </div>
-            
-      </Carousel>
-      </TransformComponent>
-        </>
-      )}
-    </TransformWrapper>
-      <div className='inventory-item'>
+          <div className='inventory-item' onClick={(e) => handleImageClick(e)}>
         <img src={images.menu_summer} alt="menu" />
       </div>
+      </Carousel>
+
+    
+
       
       </div>
+      {selectedImage && (
+
+        <div className="modal slide-bottom">
+            <GiCrossedAirFlows
+              fontSize={27}
+              className='overlay__close'
+              onClick={() => closeModal()}
+              />
+            <TransformWrapper initialScale={1}>
+    {({ ...rest }) => (
+      <TransformComponent>
+          <img src={selectedImage} alt="Fullscreen" />
+          </TransformComponent>
+        )}
+      </TransformWrapper>
+          </div>
+
+      )}
     </div>
   )
 }
