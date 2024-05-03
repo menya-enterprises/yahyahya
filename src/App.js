@@ -20,14 +20,16 @@ function App() {
     i18n.changeLanguage(lang);
   }
   React.useEffect(() => {
+    if (!loading) {
       setTimeout(() => {
         console.log('page is fully loaded');
-        setLoading(false);
         setTimeout(() => {
           setShowLoader(false);
         }, 1250);
-      }, 500);
-  }, []);
+      }, 250);
+    }
+
+  }, [loading]);
   return (
     <div>
       {showLoader && (
@@ -53,6 +55,7 @@ function App() {
           controls={false}
           autoPlay
           playsInline
+          onLoadedData={() => setLoading(false)}
           />
           <div className='app__top-video_overlay flex__center'/>
         </div>
