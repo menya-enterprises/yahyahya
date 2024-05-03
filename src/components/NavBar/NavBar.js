@@ -19,7 +19,6 @@ function NavBar({handleChangeLanguage}) {
           <a href='/'><img src={images.logo} alt="logo" /></a>
         </div>
         <ul className='app__navbar-links'>
-          {/* <li className="p__opensans"><a href='#home'>{t("navbar.home")}</a></li> */}
           <li className="p__opensans"><a href='#about'>{t("navbar.about")}</a></li>
           <li className="p__opensans"><a href='#menu'>{t("navbar.menu")}</a></li>
           <li className="p__opensans"><a href='#news'>{t("navbar.news")}</a></li>

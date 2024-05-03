@@ -32,17 +32,6 @@ function Menu() {
     <div className='app__menu section__padding app__wrapper app__bg' id="menu">
       <h1 className='headtext__tenor'>{t("navbar.menu")}</h1>
       <div className='app__menu-inventory'>
-        {/* {data.map((element) => (
-          <div className='menu__category' key={element.name}>
-            <h1>{(element.name).toUpperCase()}</h1>
-            <div className="category__inventory">
-            {element.data.map((item) => (
-              <MenuItem item={item} img={images["img" + item.id]}key={item.id} />
-            ))}
-            </div>
-          </div>
-          ))} */}
-
         <Carousel
             infiniteLoop={true} 
             dynamicHeight={true}
@@ -52,7 +41,6 @@ function Menu() {
             showIndicators={false}
             preventMovementUntilSwipeScrollTolerance={true}
             className='inventory-carousel'
-            // onClickItem={(_, event, item) => handleImageClick(event, item)}
         >
           <div className="inventory-item" onClick={(e) => handleImageClick(e)}>
             <img src={images.menu_front} alt="menu" />

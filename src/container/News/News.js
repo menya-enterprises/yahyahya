@@ -33,19 +33,6 @@ function News() {
   return (
     <div className='app__news section__padding app__wrapper app__bg' id="news">
       <h1 className='headtext__tenor'>{t("navbar.news")}</h1>
-      {/* <div className='app__news-video'>
-        <video
-          src={newsVideo}
-          type="video/mp4"
-          muted
-          loop
-          controls={false}
-          autoPlay
-          playsInline
-        />
-        <div className='app__aboutUs-video_overlay flex__center'></div>
-      </div> */}
-      
       <div className="app__news-content section__padding">
         {extended ? (
           <div className='news__content-holder'>
