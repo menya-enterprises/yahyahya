@@ -11,8 +11,8 @@ import ClipLoader from "react-spinners/ClipLoader";
 
 
 function App() {
-  // eslint-disable-next-line
   const [loading, setLoading] = React.useState(true);
+  // eslint-disable-next-line
   const [t, i18n] = useTranslation("global");
   const handleChangeLanguage = (lang) => {
     i18n.changeLanguage(lang);
