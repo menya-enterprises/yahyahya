@@ -12,17 +12,25 @@ import ClipLoader from "react-spinners/ClipLoader";
 
 function App() {
   const [loading, setLoading] = React.useState(true);
+  const [showLoader, setShowLoader] = React.useState(true);
+
   // eslint-disable-next-line
   const [t, i18n] = useTranslation("global");
   const handleChangeLanguage = (lang) => {
     i18n.changeLanguage(lang);
   }
   React.useEffect(() => {
-      setLoading(false);
+      setTimeout(() => {
+        console.log('page is fully loaded');
+        setLoading(false);
+        setTimeout(() => {
+          setShowLoader(false);
+        }, 1250);
+      }, 500);
   }, []);
   return (
     <div>
-      {loading && (
+      {showLoader && (
         <div className={`loading ${!loading ? 'fade-out' : ''}`}>
           <ClipLoader
             color="#CFB483"
@@ -33,7 +41,6 @@ function App() {
           />
         </div>
       )}
-
       <div className="app__top">
         <NavBar handleChangeLanguage={handleChangeLanguage}/>
         <Header />
