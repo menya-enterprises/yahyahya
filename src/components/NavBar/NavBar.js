@@ -43,14 +43,14 @@ function NavBar({handleChangeLanguage}) {
       </div>
       <div className="app__navbar-bottom">
         <div className="app__navbar-lang">
-          <li className="dropdown">
-              <button className="dropdown-button"><FaLanguage size={32} /></button>
+          <div className="dropdown">
+              <button className="dropdown-button" aria-label='Language Change'><FaLanguage size={32} /></button>
               <div className="dropdown-content">
                   <button onClick={(e) => handleChangeLanguage((e.target.innerText).toLowerCase())}>EN</button>
                   <button onClick={(e) => handleChangeLanguage((e.target.innerText).toLowerCase())}>JA</button>
                   <button onClick={(e) => handleChangeLanguage(("zh").toLowerCase())}>CN</button>
               </div>
-          </li>
+          </div>
         </div>
         <div className='app__navbar-smallscreen'>
         <GiHamburgerMenu color='#fff' fontSize={27} onClick={() => setToggleMenu(true)} />
