@@ -40,7 +40,7 @@ function News() {
               <div className='news__content-item' key={element.id}>
                 <h1 className='p__tenor'>{element.title}</h1>
                 <p className='p__opensans'>{element.date}</p>
-                <p className='p__opensans'>{element.content}</p>
+                <p className='p__opensans' style={{whiteSpace: "pre-line"}}>{element.content}</p>
                 <button className='news__content-link p__opensans' onClick={() => handleSeeFull(element)}>See Full</button>
               </div>
             ))}
@@ -52,7 +52,7 @@ function News() {
               <div className='news__content-item' key={element.id}>
                 <h1 className='p__tenor'>{element.title}</h1>
                 <p className='p__opensans'>{element.date}</p>
-                <p className='p__opensans'>{element.content}</p>
+                <p className='p__opensans' style={{whiteSpace: "pre-line"}}>{element.content}</p>
                 <button className='news__content-link p__opensans' onClick={() => handleSeeFull(element)}>See Full</button>
               </div>
             ))}

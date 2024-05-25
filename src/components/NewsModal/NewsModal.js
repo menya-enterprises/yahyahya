@@ -14,7 +14,7 @@ const NewsModal = ({ newsItem, onClose }) => {
       <div className="modal__content">
         <h1 className='p__tenor'>{newsItem.title}</h1>
         <p className='p__opensans'>{newsItem.date}</p>
-        <p className='p__opensans'>{newsItem.content}</p>
+        <p className='p__opensans' style={{whiteSpace: "pre-line"}}>{newsItem.content}</p>
       </div>
     </div>
   );
