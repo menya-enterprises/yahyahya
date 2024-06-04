@@ -1,8 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Tenor+Sans:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@font-face {
+  font-family: 'TenorSans';
+  src: url(./assets/fonts/Tenor_Sans/TenorSans-Regular.ttf) format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url(./assets/fonts/Open_Sans/static/OpenSans-Regular.ttf) format('truetype'),
+  url(./assets/fonts/Open_Sans/static/OpenSans-Bold.ttf) format('truetype');
+  font-display: swap;
+}
 
 :root {
-  --font-base: 'Tenor Sans', serif;
-  --font-alt: 'Open Sans', sans-serif;  
+  --font-base: 'TenorSans', serif;
+  --font-alt: 'OpenSans', sans-serif;  
 
   --color-gold: #CFB483;
   --color-lightGold: #F2DEC5;

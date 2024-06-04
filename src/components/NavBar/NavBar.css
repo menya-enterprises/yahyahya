@@ -180,6 +180,12 @@
     color: var(--color-gold);
 }
 
+@media screen and (min-width: 2000px) {
+    .app__navbar-logo img {
+        width: 350px;
+    }
+}
+
 @media screen and (max-width: 1150px) {
     .app__navbar-links, .app__navbar-order {
         display: none;

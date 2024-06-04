@@ -23,7 +23,7 @@ function Gallery() {
         {Object.entries(gallery).map(([key, picture]) => (
             <div className='gallery__item' key={key}>
                 <div className="gallery__item-img">
-                    <img src={picture.file} alt={picture.alt} loading='lazy'/>
+                    <img src={picture.file} alt={picture.alt} loading='lazy' decoding='async'/>
                     <p className="p__opensans legend">{t(`dishes.${picture.alt}`, { ns: 'dishes'})}</p>
                 </div>
             </div>

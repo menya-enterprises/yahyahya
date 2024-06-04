@@ -70,7 +70,9 @@
 }
 
 .app__wrapper_img img {
+  display: block;
   width: 100%;
+  height: 100%;
 }
 
 .horizontal__divider {
@@ -174,8 +176,8 @@
   }
 
   .headtext__tenor {
-    font-size: 150px;
-    line-height: 210px;
+    font-size: 140px;
+    line-height: 196px;
   }
 
 }

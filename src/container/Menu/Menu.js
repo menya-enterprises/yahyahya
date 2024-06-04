@@ -43,13 +43,13 @@ function Menu() {
             className='inventory-carousel'
         >
           <div className="inventory-item" onClick={(e) => handleImageClick(e)}>
-            <img src={images.menu_front} alt="menu" loading='eager'/>
+            <img src={images.menu_front} alt="menu" loading='lazy' decoding='async'/>
           </div>
           <div className="inventory-item" onClick={(e) => handleImageClick(e)}>
-            <img src={images.menu_back} alt="menu" loading='lazy'/>
+            <img src={images.menu_back} alt="menu" loading='lazy' decoding='async'/>
           </div>
           <div className='inventory-item' onClick={(e) => handleImageClick(e)}>
-        <img src={images.menu_summer} alt="menu" loading='lazy'/>
+        <img src={images.menu_summer} alt="menu" loading='lazy' decoding='async'/>
       </div>
       </Carousel>
 

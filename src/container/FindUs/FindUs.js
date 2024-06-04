@@ -40,7 +40,7 @@ function FindUs() {
       </div>
       <div className="app__findUs-identity">
         <div className="identity-logo">
-          <img src={images.logo} alt="logo" />
+          <img src={images.logo} alt="logo" decoding='async' loading='lazy'/>
         </div>
         <div className='identity-map'>
           <iframe

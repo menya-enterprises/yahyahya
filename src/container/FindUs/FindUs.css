@@ -14,13 +14,9 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    height: 400px;
-    width: 500px;
 }
 
 .app__findUs-identity {
-    width: 500px;
-    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
