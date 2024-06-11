@@ -1,6 +1,12 @@
 {
     "news": [
       {
+        "id": 3,
+        "title": "オープンハウスのチケット結果",
+        "date": "June 11, 2024",
+        "content": "お客様各位\n10周年記念イベント「オープンハウス」チケットの抽選が終了しました\n\n- Matthew W.\n- Janet M.\n- Hayley V.\n- Cody L.\n- Alejandra T.\n- Maggie Y.\n- Hermia J.\n\n以上の方々に招待状をEメールでお送りしました。 招待状が届いていないか、受信トレイか迷惑メールをチェックしてください。\nお席を確保をするので、6月14日までにご返信下さい。よろしくお願いします。\n\nたくさんの応募ありがとうございました！"
+      },
+      {
         "id": 2,
         "title": "Open House Event",
         "date": "April 15, 2024",
